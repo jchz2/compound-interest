@@ -41,15 +41,15 @@ function App() {
           }}
           onSubmit={handleSubmit}
           validationSchema={Yup.object({ 
-            deposit: Yup.number().required('obligatorio').typeError('Debe de ser un número'),
-            contribution: Yup.number().required('obligatorio').typeError('Debe de ser un número'),
-            years: Yup.number().required('obligatorio').typeError('Debe de ser un número'),
+            deposit: Yup.number().required('Obligatorio').typeError('Debe de ser un número'),
+            contribution: Yup.number().required('Obligatorio').typeError('Debe de ser un número'),
+            years: Yup.number().required('Obligatorio').typeError('Debe de ser un número'),
             rate: Yup
-            .number()
-            .required('obligatorio')
-            .typeError('Debe de ser un número')
-            .min(0, 'El valor minimo es 0')
-            .miax(1, 'El valor maximo es 1'),
+              .number()
+              .required('Obligatorio')
+              .typeError('Debe de ser un número')
+              .min(0, 'El valor minimo es 0')
+              .max(1, 'El valor maximo es 1'),
           })}
         >
           <Form>
